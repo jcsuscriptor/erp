@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<!-- Factura Proveedor. Formulario  -->			
+		<record model="ir.ui.view" id="invoice_supplier_form_campus_ecua">
+			<field name="name">invoice.supplier.form.campus.ecua</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_supplier_form" />
+			<field name="arch" type="xml">
+	 
+				<!-- colocamos Numero de Factura Proveedor -->
+				<xpath expr="/form/sheet/group/group/field[@name='partner_id']" position="after">
+				    <field name="supplier_invoice_number" 
+					       string="Numero Factura"
+						   required="1" 
+						   placeholder="Numero Factura Proveedor"/>
+				</xpath>
+
+				<!-- Fecha Obligatoria -->
+				<xpath expr="/form/sheet/group/group[2]/field[@name='date_invoice']" position="attributes">
+					<attribute name="required">1</attribute> 
+				</xpath>
+
+ 				
+				<!-- colocamos los subtotales,iva,totales -->
+				<xpath expr="/form/sheet/notebook/page/group/group[2]/field[@name='amount_untaxed']" position="after">
+				    <field name="base_amount_vat_cero" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					<field name="base_amount_vat" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>				
+					<field name="vat" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					<field name="invoice_total" class="oe_subtotal_footer_separator" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>				
+				</xpath>
+
+				<!-- Ocultar Campos -->
+				<field name="amount_tax"  position="attributes">
+					<attribute name="invisible">1</attribute> 
+				</field>
+				<field name="amount_total"  position="attributes">
+					<attribute name="invisible">1</attribute> 
+				</field>
+   						 
+			</field>			
+		</record>
+	
+ 
+
+		<!-- Factura Proveedor. Listado  -->	
+	    <record model="ir.ui.view" id="account_invoice_supplier_tree_campus_ecua" >
+            <field name="name">account.invoice.supplier.tree.campus.ecua</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+            <field name="arch" type="xml">
+                <!-- 
+				<xpath expr="/tree/field[@name='date_invoice']" position="after">
+                    <field name="supplier_invoice_number" string="Numero Factura"/>
+                </xpath>
+				-->
+
+				<field name="date_invoice" position="after">
+					 <field name="supplier_invoice_number" string="Numero Factura"/>
+                </field>
+
+				<field name="number" position="attributes">
+					<attribute name="string">Cuenta</attribute>
+                </field>
+ 
+				<field name="reference" position="replace">
+                </field>
+ 
+
+            </field>
+        </record>
+
+
+
+		<!-- Factura Cliente. Formulario  -->
+		<record model="ir.ui.view" id="account_invoice_form_campus_ecua">
+			<field name="name">account.invoice.form.campus.ecua</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_form" />
+			<field name="arch" type="xml">
+
+				<!-- Autorizacion SRI, para emitir Facturas  -->
+				<field name="partner_id" position="after">
+					<field name="auth_inv_id" domain="[('in_type','=','interno')]" 
+					required="1" 
+					options="{'no_create':True, 'no_create_edit': True}"/>
+				</field>	
+				
+				<!-- Fecha Obligatoria -->
+				<xpath expr="/form/sheet/group/group[2]/field[@name='date_invoice']" position="attributes">
+					<attribute name="required">1</attribute> 
+				</xpath>
+
+
+				<!-- colocamos los subtotales -->
+				<field name="amount_untaxed"  position="after">
+				    <field name="base_amount_vat_cero" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					<field name="base_amount_vat" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>				
+					<field name="vat" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					<field name="invoice_total" class="oe_subtotal_footer_separator" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>				
+				</field>
+
+				<!-- Ocultar Campos -->
+				<field name="amount_tax"  position="attributes">
+					<attribute name="invisible">1</attribute> 
+				</field>
+				<field name="amount_total"  position="attributes">
+					<attribute name="invisible">1</attribute> 
+				</field>
+   						 
+		
+			</field>			
+		</record>
+	 
+
+	 
+		
+		
+	</data>
+</openerp>

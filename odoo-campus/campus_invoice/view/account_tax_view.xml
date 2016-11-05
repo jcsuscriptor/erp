@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record id="account_tax_form_view" model="ir.ui.view" >
+			<field name="name">account.tax.form</field>
+			<field name="model">account.tax</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.view_tax_form" />
+			<field name="arch" type="xml">
+				 <notebook position="inside">
+					<page string="Configuracion Ecuador">
+						<field name="type_ec" required="1" colspan="1"/>
+					</page>
+				</notebook>
+
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="account_tax_template_form_view">
+			<field name="name">account.tax.template.form</field>
+			<field name="model">account.tax.template</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.view_account_tax_template_form" />
+			<field name="arch" type="xml">
+				 <notebook position="inside">
+					<page string="Configuracion Ecuador">
+						<field name="type_ec"></field>
+					</page>
+				</notebook>
+
+			</field>
+		</record>
+
+	</data>
+</openerp>

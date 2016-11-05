@@ -1,0 +1,13 @@
+id,name,type_ec
+__export__.account_tax_6,Sale Retencion (100%)(100.0%),renta
+__export__.account_tax_8,Purchase IVA Pagado (12%)(12.0%),iva
+__export__.account_tax_5,Sale Retencion (70%)(70.0%),renta
+__export__.account_tax_4,Sale Retencion (30%)(30.0%),renta
+__export__.account_tax_2,Sale IVA Pagado (12%)(12.0%),iva
+__export__.account_tax_7,Purchase IVA Cobrado (12%)(12.0%),iva
+__export__.account_tax_12,Purchase Retencion (100%)(100.0%),renta
+__export__.account_tax_9,Purchase Retencion (8%)(8.0%),renta
+__export__.account_tax_10,Purchase Retencion (30%)(30.0%),renta
+__export__.account_tax_11,Purchase Retencion (70%)(70.0%),renta
+__export__.account_tax_3,Sale Retencion (8%)(8.0%),renta
+__export__.account_tax_1,Sale IVA Cobrado (12%)(12.0%),iva

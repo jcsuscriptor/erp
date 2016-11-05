@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+        <report 
+            id="account_invoice_action_report_campus"
+            model="account.invoice"
+            string="Factura Ecuatoriana"
+            report_type="qweb-pdf"
+            name="campus_invoice.account_invoice_report_campus"
+            file="campus_invoice.account_invoice_report_campus"
+            attachment_use="False"
+        />
+
+
+        <template id="account_invoice_report_campus" inherit_id="account.report_invoice_document" primary="True">
+            
+            <xpath expr="//div[@class='page']/div[3]/div/table/tr[1]"  position="after">
+                 
+                <tr>
+                        <td><strong>Gravado IVA 0%</strong></td>
+                        <td class="text-right">
+                            <span t-field="o.base_iva_cero" t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                        </td>
+                </tr>
+
+                <tr>
+                        <td><strong>Gravado IVA 14%</strong></td>
+                        <td class="text-right">
+                            <span t-field="o.base_iva" t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                        </td>
+                </tr>
+
+                <tr>
+                        <td><strong>14% IVA</strong></td>
+                        <td class="text-right">
+                            <span t-field="o.total_iva" t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                        </td>
+                </tr>
+ 
+            </xpath>
+
+        </template>
+
+	</data>
+</openerp>
+        

@@ -1,0 +1,121 @@
+campus_invoice.models.account_invoice: create. vals: {u'comment': False, u'message_follower_ids': False, u'date_due': u'2016-09-08', u'partner_bank_id': False, u'journal_id': 1, u'currency_id': 3, u'origin': False, u'team_id': 1, u'partner_id': 6, u'message_ids': False, u'account_id': 56, u'user_id': 1, u'company_id': 1, u'incoterms_id': False, u'auth_inv_id': 1, u'move_name': False, u'date_invoice': u'2016-09-08', u'payment_term_id': 1, u'tax_line_ids': [[0, False, {u'account_id': 182, u'sequence': 1, u'manual': False, u'name': u'Sale IVA Cobrado (12%)(12.0%)', u'currency_id': 3, u'amount': 2.05, u'account_analytic_id': False, u'tax_id': 1}]], u'fiscal_position_id': False, u'name': False, u'invoice_line_ids': [[0, False, {u'uom_id': 1, u'product_id': 1, u'sequence': 10, u'price_unit': 5.7, u'name': u'demo', u'discount': 0, u'invoice_line_tax_ids': [[6, False, [1]]], u'account_analytic_id': False, u'quantity': 3, u'account_id': 252}]]}
+
+
+
+===================================================
+account_invoice: _onchange_partner_id
+account_invoice: create
+account_invoice: _onchange_partner_id
+account_invoice: _get_reference_type
+account_invoice: _compute_amount
+account_invoice: _compute_residual
+account_invoice: _compute_payments
+account_invoice: _track_subtype
+account_invoice: name_get
+account_invoice: _compute_amount
+account_invoice: _compute_residual
+account_invoice: compute_taxes
+account_invoice: get_taxes_values
+account_invoice: _compute_amount
+account_invoice: _compute_amount
+account_invoice: _compute_residual
+account_invoice: action_date_assign
+account_invoice: _onchange_payment_term_date_invoice
+campus_invoice.models.account_invoice: action_move_create. partner_id.id 6
+account_invoice: action_move_create
+account_invoice: invoice_line_move_line_get
+account_invoice: tax_line_move_line_get
+account_invoice: compute_invoice_totals
+account_invoice: line_get_convert
+account_invoice: line_get_convert
+account_invoice: line_get_convert
+account_invoice: group_lines
+account_invoice: finalize_invoice_move_lines
+account_invoice: _compute_residual
+account_invoice: _compute_payments
+account_invoice: invoice_validate
+account_invoice: _compute_residual
+account_invoice: _track_subtype
+account_invoice: name_get
+account_invoice: _get_tax_amount_by_group
+
+
+
+=--=================================================
+
+2016-09-15 05:29:15,180 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: fields_view_get
+2016-09-15 05:29:15,211 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _get_reference_type
+2016-09-15 05:29:15,549 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _default_journal
+2016-09-15 05:29:15,555 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _default_currency
+2016-09-15 05:29:15,555 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _default_journal
+2016-09-15 05:29:16,151 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:29:16,164 12744 INFO 9_final_1 werkzeug: 127.0.0.1 - - [15/Sep/2016 05:29:16] "POST /web/dataset/call_kw/res.users/name_get HTTP/1.1" 200 -
+2016-09-15 05:29:16,188 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:29:16,220 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:29:16,226 12744 INFO 9_final_1 werkzeug: 127.0.0.1 - - [15/Sep/2016 05:29:16] "POST /web/dataset/call_kw/account.journal/name_get HTTP/1.1" 200 -
+2016-09-15 05:29:16,227 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:29:16,233 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_partner_id
+2016-09-15 05:29:16,234 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_payment_term_date_invoice
+2016-09-15 05:29:16,244 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_payment_term_date_invoice
+2016-09-15 05:29:16,253 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_invoice_line_ids
+2016-09-15 05:29:16,253 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: get_taxes_values
+2016-09-15 05:29:16,255 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:29:16,266 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_journal_id
+2016-09-15 05:29:16,270 12744 DEBUG 9_final_1 openerp.addons.campus_invoice.models.account_invoice: _set_authorisation_sri
+2016-09-15 05:29:16,272 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:29:16,273 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:29:16,275 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_partner_id
+2016-09-15 05:29:30,885 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_partner_id
+2016-09-15 05:29:46,112 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_payment_term_date_invoice
+2016-09-15 05:29:51,766 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_invoice_line_ids
+2016-09-15 05:29:51,766 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: get_taxes_values
+2016-09-15 05:29:51,767 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:29:51,802 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:29:51,858 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_invoice_line_ids
+2016-09-15 05:29:51,858 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: get_taxes_values
+2016-09-15 05:29:51,861 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:29:51,862 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:29:52,242 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_invoice_line_ids
+2016-09-15 05:29:52,242 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: get_taxes_values
+2016-09-15 05:29:52,244 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:29:52,244 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:30:19,381 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_invoice_line_ids
+2016-09-15 05:30:19,381 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: get_taxes_values
+2016-09-15 05:30:19,384 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:30:19,384 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:30:19,780 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_invoice_line_ids
+2016-09-15 05:30:19,780 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: get_taxes_values
+2016-09-15 05:30:19,783 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:30:19,785 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+2016-09-15 05:30:42,795 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _onchange_payment_term_date_invoice
+2016-09-15 05:30:42,802 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_amount
+2016-09-15 05:30:42,802 12744 DEBUG 9_final_1 openerp.addons.account.models.account_invoice: _compute_residual
+account.models.account_invoice: create
+account.models.account_invoice: _get_reference_type
+account.models.account_invoice: _compute_amount
+account.models.account_invoice: _compute_residual
+account.models.account_invoice: _compute_payments
+account.models.account_invoice: _track_subtype
+account.models.account_invoice: name_get
+account.models.account_invoice: _get_payment_info_JSON
+account.models.account_invoice: _get_outstanding_info_JSON
+account.models.account_invoice: name_get
+ account.models.account_invoice: action_date_assign
+account.models.account_invoice: _onchange_payment_term_date_invoice
+campus_invoice.models.account_invoice: action_move_create. partner_id.id 6
+account.models.account_invoice: action_move_create
+account.models.account_invoice: invoice_line_move_line_get
+account.models.account_invoice: tax_line_move_line_get
+account.models.account_invoice: compute_invoice_totals
+account.models.account_invoice: line_get_convert
+account.models.account_invoice: line_get_convert
+account.models.account_invoice: line_get_convert
+account.models.account_invoice: group_lines
+account.models.account_invoice: finalize_invoice_move_lines
+account.models.account_invoice: _compute_residual
+account.models.account_invoice: _compute_payments
+account.models.account_invoice: invoice_validate
+account.models.account_invoice: _compute_residual
+account.models.account_invoice: _track_subtype
+account.models.account_invoice: name_get
+ 

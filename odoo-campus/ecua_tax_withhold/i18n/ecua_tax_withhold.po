@@ -1,0 +1,635 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* ecua_tax_withhold
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140314-003129\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-30 17:36+0000\n"
+"PO-Revision-Date: 2014-05-30 17:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecua_tax_withhold
+#: model:ir.actions.report.xml,name:ecua_tax_withhold.withhold_report
+msgid "Retenciones"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,automatic:0
+msgid "Automatic?"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:res.company,journal_iva_id:0
+msgid "Journal for IVA Movements"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Set to draft"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:res.company,journal_ir_id:0
+msgid "Journal for IR Movements"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,company_id:0
+msgid "Company related with this withhold (in multi-company environment)"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Group By..."
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "Without retention"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.invoice,withhold_exist:0
+msgid "Show internally if a withhold asociated exist"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,invoice_amount_untaxed:0
+msgid "Invoice amount untaxed used like base for the compute of tax"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Document"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.move.line,withhold_id:0
+msgid "Relation with the withholding"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "View Withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+#: selection:account.withhold,state:0
+msgid "Approved"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,withhold_line_ids:0
+msgid "Withhold lines"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.invoice,withhold_line_ids:0
+msgid "Lines description of related withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,invoice_vat_doce_subtotal:0
+msgid "Invoice vat doce subtotal used like base for the compute of tax"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+#: field:account.invoice,withhold_id:0
+#: field:account.move.line,withhold_id:0
+#: view:account.withhold:0
+#: field:account.withhold,account_voucher_ids:0
+#: field:account.withhold.line,withhold_id:0
+msgid "Withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold.line,tax_base:0
+msgid "Base Value for the compute of tax"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold.line,tax_amount:0
+msgid "Amount"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Approve Withholds"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold.line,tax_amount:0
+msgid "Amount of tax withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,shop_id:0
+msgid "Shop"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.invoice,withhold_id:0
+msgid "number of related withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,printer_id:0
+msgid "Printer Point related with this transaction, only need in Purchase"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.invoice,address_invoice:0
+msgid "Address of invoice"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "Re-Open"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "_Cancel"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: selection:account.withhold.line,description:0
+msgid "RENTA"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+#: field:account.withhold,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.actions.act_window,name:ecua_tax_withhold.action_account_withhold_purchase
+#: model:ir.ui.menu,name:ecua_tax_withhold.withhold_purchases
+msgid "Withhold of Purchases"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,total:0
+msgid "Total value of withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.invoice,address_invoice:0
+msgid "Invoice address"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold.line,description:0
+#: help:account.withhold.line,tax_ac_id:0
+#: help:account.withhold.line,tax_id:0
+msgid "Tax"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Number of Withhold "
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,number:0
+msgid "Number"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,transaction_type:0
+msgid "Transaction type"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,period_id:0
+msgid "Period related with this transaction"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Print"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Save"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,total_base_iva:0
+msgid "Total Base IVA"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,total_renta:0
+msgid "Total RENTA"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,invoice_id:0
+msgid "Number of document"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,creation_date:0
+msgid "Creation Date"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,authorization_sri:0
+msgid "Number of authorization use by the withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.actions.act_window,name:ecua_tax_withhold.action_withhold_wizard_purchase
+msgid "Complete data Purchase Withhold "
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,invoice_amount_untaxed:0
+msgid "Invoice amount untaxed"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:res.company:0
+msgid "Configuration"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,total:0
+msgid "Total Withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,printer_id:0
+msgid "Printer Point"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+#: field:account.invoice,withhold_line_ids:0
+#: view:account.withhold:0
+msgid "Withhold Lines"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "Withhold Number"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold.line,withhold_percentage:0
+msgid "Percentaje Value (%)"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: constraint:account.withhold:0
+msgid "There is another Withhold generated with this number, please verify"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: selection:account.withhold.line,description:0
+msgid "IVA"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+#: field:account.withhold,state:0
+msgid "State"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,total_base_renta:0
+msgid "Total Base RENTA"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "Withholds"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: selection:account.withhold,state:0
+msgid "Canceled"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,comment:0
+msgid "Additional Information"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,creation_date:0
+msgid "Date of creation of Withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,total_renta:0
+msgid "Total renta value of withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+#: selection:account.withhold,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold.line,fiscalyear_id:0
+msgid "Fiscal Year of transaction"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,authorization_sri:0
+msgid "Authorization"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Status"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.invoice,withhold_exist:0
+msgid "unknown"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Draft Withholds"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold.line,description:0
+msgid "Type of Tax (IVA/RENTA)"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,invoice_id:0
+msgid "Invoice related with this withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.model,name:ecua_tax_withhold.model_account_move_line
+msgid "Journal Items"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,invoice_vat_doce_subtotal:0
+msgid "Invoice vat doce subtotal"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,shop_id:0
+msgid "Shop related with this transaction, only need in Purchase"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,withhold_line_ids:0
+msgid "List of withholds"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.model,name:ecua_tax_withhold.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold.line,tax_ac_id:0
+#: field:account.withhold.line,tax_id:0
+msgid "Tax Code"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Search Invoice"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: selection:account.withhold,transaction_type:0
+msgid "Purchases"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,total_base_renta:0
+msgid "Total base renta of withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,total_base_iva:0
+msgid "Total base IVA of withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,partner_id:0
+msgid "Partner related with this withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+#: field:account.withhold,period_id:0
+msgid "Period"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold.line,withhold_id:0
+msgid "Number of related withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+#: model:ir.model,name:ecua_tax_withhold.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.actions.act_window,name:ecua_tax_withhold.action_account_withhold_sale
+#: model:ir.ui.menu,name:ecua_tax_withhold.withhold_sales
+msgid "Withhold of Sales"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Cancel"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "With retention"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "No Withholds"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:res.company,journal_iva_id:0
+msgid "IVA Journal"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Print Withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold.line,tax_base:0
+msgid "Tax Base"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:res.company,journal_ir_id:0
+msgid "IR Journal"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold.line,withhold_percentage:0
+msgid "Percentage Value of tax withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,account_voucher_ids:0
+msgid "List of account moves"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: selection:account.withhold,transaction_type:0
+msgid "Sales"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold,total_iva:0
+msgid "Total IVA"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,number:0
+msgid "Number of Withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.actions.act_window,name:ecua_tax_withhold.action_withhold_wizard_sale
+msgid "Complete data Sale Withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,comment:0
+msgid "Text can be use to comment the withhold, if it's necesary"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:res.company:0
+msgid "Ecuadorian Accounting"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.model,name:ecua_tax_withhold.model_account_withhold_line
+msgid "account.withhold.line"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "Ask Refund"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: field:account.withhold.line,fiscalyear_id:0
+msgid "Fiscal Year"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.invoice:0
+msgid "Payments"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,total_iva:0
+msgid "Total IVA value of withhold"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Approve"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: help:account.withhold,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Withhold Wizard"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: model:ir.model,name:ecua_tax_withhold.model_account_withhold
+msgid "Email Thread"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:res.company:0
+msgid "Accounting"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: view:account.withhold:0
+msgid "Account voucher lines"
+msgstr ""
+
+#. module: ecua_tax_withhold
+#: code:addons/ecua_tax_withhold/object/invoice.py:86
+#, python-format
+msgid "Can't cancel a invoice with a associated withhold, please, delete the withhold first"
+msgstr ""

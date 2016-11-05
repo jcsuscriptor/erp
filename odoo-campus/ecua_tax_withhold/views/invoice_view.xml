@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		
+		<!-- Purchase Invoice -->
+		<record model="ir.ui.view" id="account_invoice_purchase_withhold_form_view">
+			<field name="name">account.invoice.purchase.withhold.form</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_supplier_form" />
+			<field name="arch" type="xml">
+				<button string='Ask Refund' position="after">
+<!-- 						<button name="%(action_withhold_wizard_purchase)d" string="Withhold" -->
+<!-- 								type="action" icon="terp-gtk-jump-to-ltr"  -->
+<!-- 								attrs="{'invisible':['|',('state','=','draft'),('withhold_exist','=',True)]}" -->
+<!-- 								context="{'transaction_type':'purchase'}" /> -->
+						<button name="add_witthold" string="Withhold"
+								type="object" icon="terp-gtk-jump-to-ltr" 
+								attrs="{'invisible':['|',('state','in',['draft','cancel']),('withhold_exist','=',True)]}"
+								context="{'transaction_type':'purchase'}" />
+                        <button name="action_view_withhold" string="View Withhold" type="object" class="oe_highlight"
+                            	attrs="{'invisible': [('withhold_exist', '=', False)]}"/>
+				</button>
+                <page string="Payments" position="after">
+	                <page string="Withholds"
+	                attrs="{'invisible':[('withhold_exist','=',False)]}">
+						<field name="withhold_exist" invisible="1"/>
+						<field name="withhold_id" nolabel="0" string="Withhold Number" readonly="1"/>
+						<field name="withhold_line_ids" nolabel="1" readonly="1">
+							<tree string="Withhold Lines">
+								<field name="description" />
+								<field name="tax_id" />
+								<field name="tax_base" />
+								<field name="tax_amount" />
+								<field name="withhold_percentage"/>
+							</tree>
+						</field>
+					</page>
+                </page>
+			</field>
+		</record> 
+		
+		<!-- Sale Invoice -->
+		<record model="ir.ui.view" id="account_invoice_sale_withhold_form_view">
+			<field name="name">account.invoice.sale.withhold.form</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_form" />
+			<field name="arch" type="xml">
+				<button string='Re-Open' position="after">
+						<!-- TODO: Cambior de tipo accion a tipo object para mayor flexibilidad -->
+						<button name="%(action_withhold_wizard_sale)d" string="Withhold"
+								type="action" icon="terp-gtk-jump-to-ltr" 
+								attrs="{'invisible':['|',('state','in',['draft','cancel']),('withhold_exist','=',True)]}"
+								context="{'transaction_type':'sale', 'amount_untaxed':amount_untaxed, 'invoice_line':invoice_line, 'vat_doce_subtotal':vat_doce_subtotal}"/>
+                        <button name="action_view_withhold" string="View Withhold" type="object" class="oe_highlight"
+                            	attrs="{'invisible': [('withhold_exist', '=', False)]}"/>
+				</button>
+                <page string="Payments" position="after">
+	                <page string="Withholds"
+	                attrs="{'invisible':[('withhold_exist','=',False)]}">
+						<field name="withhold_exist" invisible="1"/>
+						<field name="withhold_id" string="Withhold Number" nolabel="0" readonly="1"/>
+						<field name="withhold_line_ids" nolabel="1" readonly="1">
+							<tree string="Withhold Lines">
+								<field name="description" />
+								<field name="tax_id" />
+								<field name="tax_base" />
+								<field name="tax_amount" />
+								<field name="withhold_percentage"/>
+							</tree>
+						</field>
+					</page>
+                </page>
+			</field>
+		</record>
+<!-- probar cuando exista integridad de modulos liberados  -->
+<!--         <record id="view_account_invoice__withhold_filter" model="ir.ui.view">
+            <field name="name">account.invoice.select</field>
+            <field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.view_account_invoice_filter" />            
+            <field name="arch" type="xml">
+				<xpath expr="//search/filter[@name='unpaid']" position="after">
+                    <filter name="withhold_id" string="With retention" domain="[('withhold_id','!=','')]" help="Withholds"/>				
+                    <filter name="withhold_id" string="Without retention" domain="[('withhold_id','=','')]" help="No Withholds"/>
+				</xpath>                
+                
+           </field>
+       </record>	 -->	
+		
+		
+	</data>
+</openerp>

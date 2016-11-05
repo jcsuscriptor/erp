@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <template id="campus_invoice_report_assets" name="campus_report assets" 
+            inherit_id="report.assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/report/static/src/css/campus_invoice_report.css"/>
+            </xpath>
+        </template>
+
+
+    </data>     
+</openerp>

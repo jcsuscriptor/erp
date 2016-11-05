@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   
+
+    <record id="l10n_ec.salevat1" model="account.tax.template">
+        <field name="type_ec">iva</field> 
+    </record>
+
+ 
+
+</odoo>
