@@ -1,0 +1,28 @@
+2016-08-25 18:10:24,967 6632 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: _default_internal_number
+2016-08-25 18:10:24,971 6632 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: _suggested_internal_number
+2016-08-25 18:10:24,971 6632 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: JSA. type in_invoice  in_invoice
+2016-08-25 18:11:22,244 6632 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: onchange_internal_number : internal_number : 001-001-
+
+
+Guardar:
+2016-08-25 18:31:00,562 6632 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: action_number
+2016-08-25 18:31:00,651 6632 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: _get_internal_number_by_sequence 
+
+Flujo Guardar. Factura. Validar 1:
+2016-08-25 18:47:46,862 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: action_number
+2016-08-25 18:47:46,940 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: _get_internal_number_by_sequence  
+2016-08-25 18:47:46,943 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.shop: get_next_sequence_number
+2016-08-25 18:47:46,944 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.shop: document_type : None
+2016-08-25 18:47:46,944 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.shop: sequence_id : False
+2016-08-25 18:47:46,946 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.shop: printer_id.prefix : 001-001-
+2016-08-25 18:47:46,946 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.shop: number : 001-001-
+2016-08-25 18:47:46,946 18212 DEBUG 7_final_7 openerp.addons.ecua_invoice.objects.account_invoice: action_number: number 001-001-
+
+Existe un cambio del Size del Campo.
+
+'internal_number': fields.char('Invoice Number', size=17, readonly=False, help="Unique number of the invoice, computed automatically when the invoice is created."),
+ 
+ 
+'internal_number': fields.char('Invoice Number', size=32, readonly=True, help="Unique number of the invoice, computed automatically when the invoice is created."),
+  
+  
