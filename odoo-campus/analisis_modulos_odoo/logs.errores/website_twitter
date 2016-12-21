@@ -1,0 +1,14 @@
+website_twitter
+
+2016-11-20 17:54:27,335 13460 DEBUG ? openerp.http: manifest_path C:\Program Files (x86)\Odoo 9.0-20160802\server\openerp\addons\website_twitter\__openerp__.py
+2016-11-20 17:54:27,335 13460 DEBUG ? openerp.http: Loading website_twitter
+2016-11-20 17:54:27,339 13460 INFO ? openerp.http: HTTP Configuring static files
+2016-11-20 17:54:27,351 13460 DEBUG ? openerp.http: HTTP sessions stored in: C:\Users\JuanCarlos\AppData\Local\OpenERP S.A.\Odoo\sessions
+2016-11-20 17:54:27,371 13460 INFO ? openerp.http: Generating nondb routing
+2016-11-20 17:54:27,542 13460 INFO ? werkzeug: 127.0.0.1 - - [20/Nov/2016 17:54:27] "GET /pos/web/?debug= HTTP/1.1" 404 -
+2016-11-20 17:54:29,088 13460 ERROR ? openerp.http: Exception during JSON request handling.
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Odoo 9.0-20160802\server\.\openerp\http.py", line 647, in _handle_exception
+  File "C:\Program Files (x86)\Odoo 9.0-20160802\server\.\openerp\http.py", line 1631, in _dispatch_nodb
+  File "werkzeug\routing.pyc", line 1433, in match
+NotFound: 404: Not Found

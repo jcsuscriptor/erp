@@ -1,0 +1,6 @@
+2016-11-20 18:03:07,025 21960 WARNING 9_dev openerp.modules.module: module campus_labs_pos: module not found
+2016-11-20 18:03:07,039 21960 WARNING 9_dev openerp.addons.base.module.module: docutils' system message present: <system_message level="3" line="5" source="<string>" type="ERROR"><paragraph>Unexpected indentation.</paragraph></system_message>
+2016-11-20 18:03:07,039 21960 WARNING 9_dev openerp.addons.base.module.module: docutils' system message present: <system_message level="1" line="11" source="<string>" type="INFO"><paragraph>Enumerated list start value not ordinal-1: "2" (ordinal 2)</paragraph></system_message>
+2016-11-20 18:03:07,045 21960 WARNING 9_dev openerp.modules.module: module campus_labs_pos: module not found
+2016-11-20 18:03:07,045 21960 DEBUG 9_dev openerp.modules.module: module campus_labs_pos: no __openerp__.py file found.
+2016-11-20 18:03:07,045 21960 WARNING 9_dev openerp.modules.module: module campus_labs_pos: module not found

@@ -4,14 +4,14 @@
         <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
         <div class="page">
               
-           <div class="row mt32 mb32 hidden-xs hidden-sm hidden-md">
+           <div class="row mt32 mb16 hidden-xs hidden-sm hidden-md">
                 <div name="reference" class="col-xs-2" t-if="o.reference">
                     <strong>Reference:</strong>
                     <p t-field="o.reference"/>
                 </div>
            </div>
             
-           <div class="row mt32 mb32">
+           <div class="row mt32 mb16">
                 <div class="col-xs-6">
                     <strong>Invoice Date:</strong> <span t-field="o.date_invoice"/>
                 </div>
@@ -20,31 +20,30 @@
                     <strong>Nro:</strong> <span t-field="o.number"/>
                 </div>
            </div>
-           <div class="row mt32 mb32">
+           <div class="row  mb16">
                 <div class="col-xs-12">
                     <strong>Cliente:</strong> <span t-field="o.partner_id.name" />
                 </div>
            </div>
-           <div class="row mt32 mb32" t-if="o.partner_id.ced_ruc">
+           <div class="row  mb16" t-if="o.partner_id.ced_ruc">
                 <div class="col-xs-12">
                     <strong>RUC o CI:</strong> <span t-field="o.partner_id.ced_ruc" />
                 </div>
            </div>
-           <div class="row mt32 mb32" >
-                <div class="col-xs-12">
+           <div class="row  mb16" >
+                <div class="col-xs-8" t-if="o.invoice_address">
                     <strong>Dirección:</strong> <span t-field="o.invoice_address" />
                 </div>
-           </div>
-           <div class="row mt32 mb32"  t-if="o.invoice_phone">
-                <div class="col-xs-12">
+                <div class="col-xs-4"  t-if="o.invoice_phone">
                     <strong>Teléfono:</strong> <span t-field="o.invoice_phone" />
                 </div>
            </div>
+       
  
             <!-- Is there a discount on at least one line? -->
             <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
 
-            <table class="table table-condensed">
+            <table class="table table-condensed table-invoice">
                 <thead>
                     <tr>
                         <th class="text-right col-md-1">Quantity</th>
@@ -74,9 +73,32 @@
             </table>
 
             <div class="row">
+                <div class="col-xs-6 observaciones-invoice">
+                    
+                    <div class="total_letras"><b>SON: <span t-esc="o.amount_to_text(o.invoice_total)"/></b></div>
+          
+                    
+                    <b>Forma de Pago: </b> <br />
+                    
+                    <table class="forma_pago">
+                        <tbody><tr>
+                        <td>Efectivo</td>
+                        <td class="seleccion">X</td>
+                        <td>Electrónico</td>
+                        <td class="seleccion"> </td>
+                        <td>Tarjeta de Crédito/Débito</td>
+                        <td class="seleccion"> </td>
+                        <td>Otros</td>
+                        <td class="seleccion"> </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                        </div>
+            
                 <div class="col-xs-4 pull-right">
                     <table class="table table-condensed">
-                        <tr class="border-black">
+                        <tr>
                             <td class="text-right"><strong>Subtotal</strong></td>
                             <td class="text-right">
                                 <span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
@@ -108,13 +130,16 @@
                         <tr class="border-black">
                             <td class="text-right"><strong>Total</strong></td>
                             <td class="text-right">
-                                 <span t-field="o.amount_total" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
+                                 <span t-field="o.invoice_total" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
-           
+    
+ 
+          
+
             <p t-if="o.comment">
                 <strong>Comment:</strong>
                 <span t-field="o.comment"/>

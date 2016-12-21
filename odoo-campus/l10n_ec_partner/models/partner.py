@@ -36,7 +36,6 @@ class ResPartner(models.Model):
            else: 
                continue
     """
-
     def _check_ced_ruc(self, cr, uid, ids):
         for partner in self.browse(cr, uid, ids):
             if partner.type_ced_ruc == 'cedula':

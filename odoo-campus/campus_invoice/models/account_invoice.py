@@ -2,8 +2,11 @@
 
 from openerp import models, fields, api, _
 from openerp.exceptions import ValidationError
+import amount_to_text_es
 import logging
 _logger = logging.getLogger(__name__)
+
+
 
 
 class account_invoice(models.Model):
@@ -57,6 +60,11 @@ class account_invoice(models.Model):
     def action_move_create(self):
         _logger.debug('action_move_create. partner_id.id %s',self.partner_id.id) 
         return super(account_invoice, self).action_move_create()
+
+    @api.multi
+    def amount_to_text(self, amount, currency='Euro'):
+       return amount_to_text_es.amount_to_text(amount, currency)
+
 
     @api.model
     def create(self, vals):

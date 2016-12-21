@@ -7,7 +7,7 @@
     'category': 'Ecuador',
     'complexity': 'normal',
     'data': [
-         
+         'security/ir.model.access.csv'
     ],
 
     'depends': [

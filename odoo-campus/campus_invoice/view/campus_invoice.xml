@@ -8,7 +8,5 @@
                 <link rel="stylesheet" href="/report/static/src/css/campus_invoice_report.css"/>
             </xpath>
         </template>
-
-
     </data>     
 </openerp>

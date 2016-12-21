@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"account_retention_linea","account.retention.linea","campus_withholding.model_account_retention_linea","account.group_account_invoice",1,1,1,0
+"account_retention","account.retention","campus_withholding.model_account_retention","account.group_account_invoice",1,1,1,0
+"account_retention_linea_1","account.retention.linea","campus_withholding.model_account_retention_linea","base.group_sale_manager",1,1,1,0
+"account_retention_1","account.retention","campus_withholding.model_account_retention","base.group_sale_manager",1,1,1,0
+"account_retention_linea_2","account.retention.linea","campus_withholding.model_account_retention_linea","base.group_sale_salesman",1,1,1,0
+"account_retention_2","account.retention","campus_withholding.model_account_retention","base.group_sale_salesman",1,1,1,0

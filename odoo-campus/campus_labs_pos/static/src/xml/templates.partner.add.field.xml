@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+     
+  	
+   <t t-extend="ClientDetails">
+        <t t-jquery=".client-details-left .client-detail:first-child" t-operation="before">
+            
+            <div class="client-detail">
+                <span class='label'>Tipo ID</span>
+                <t t-if='partner.type_ced_ruc'>
+                    <span class='detail client-type_ced_ruc'><t t-esc='partner.type_ced_ruc' /></span>
+                </t>
+                <t t-if='!partner.type_ced_ruc'>
+                    <span class='detail client-type_ced_ruc empty'>N/A</span>
+                </t>
+            </div>
+
+            <div class="client-detail">
+                <span class='label'>RUC o CI</span>
+                <t t-if='partner.ced_ruc'>
+                    <span class='detail client-ced_ruc'><t t-esc='partner.ced_ruc' /></span>
+                </t>
+                <t t-if='!partner.ced_ruc'>
+                    <span class='detail client-ced_ruc empty'>N/A</span>
+                </t>
+            </div>
+        </t>
+    </t>
+
+    <t t-extend="ClientDetailsEdit">
+        <t t-jquery=".client-details-left .client-detail:first-child" t-operation="before">
+            
+             <div class='client-detail'>
+                <span class='label'>Tipo ID</span>
+                <select class='detail client-type_ced_ruc' name='type_ced_ruc'>
+                    
+                    <option  t-att-selected="partner.type_ced_ruc ? (('cedula' === partner.type_ced_ruc) ? true : undefined) : undefined" value='cedula'>CEDULA</option>
+                    <option  t-att-selected="partner.type_ced_ruc ? (('ruc' === partner.type_ced_ruc) ? true : undefined) : undefined" value='ruc'>RUC</option>
+                    <option t-att-selected="partner.type_ced_ruc ? (('pasaporte' === partner.type_ced_ruc) ? true : undefined) : undefined" value='pasaporte'>PASAPORTE</option>
+                </select>
+            </div>
+
+
+            <div class='client-detail'>
+                <span class='label'>Cedula/RUC</span>
+                <input class='detail client-ced_ruc' name='ced_ruc'     
+                  t-att-value='partner.ced_ruc' placeholder='Cedula/RUC'></input>
+            </div>
+        </t>
+    </t>
+
+   
+   <t t-extend="ClientListScreenWidget">
+        <t t-jquery=".client-list  th:first-child" t-operation="before">
+            <th>Cedula/RUC</th>
+        </t>
+    </t>
+
+
+    <t t-extend="ClientLine">
+        <t t-jquery=".client-line  td:first-child" t-operation="before">
+            <td><t t-esc='partner.ced_ruc' /></td>
+        </t>
+    </t>
+    
+
+</templates>
+
+ 

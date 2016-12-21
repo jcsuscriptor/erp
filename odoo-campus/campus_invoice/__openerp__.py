@@ -1,4 +1,6 @@
-
+#Problemas para reemplazar reportes 'data': ['view/report_invoice_document_templates.xml'
+#'data': ['view/campus_invoice.xml',
+        
 {
     'name': 'Facturas Ecuatorianas',
     'version': '0.0.1',
@@ -6,8 +8,6 @@
     'category': 'Ecuador',
     'complexity': 'normal',
     'data': [
-        #Problemas para reemplazar reportes 'data': ['view/report_invoice_document_templates.xml'
-        #'data': ['view/campus_invoice.xml',
         'view/campus_invoice.xml',
         'view/account_tax_view.xml',
 		'view/invoice_view.xml',

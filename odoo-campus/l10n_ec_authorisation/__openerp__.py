@@ -10,6 +10,7 @@
     'complexity': 'normal',
     'website': 'http://www.ayni.com.ec',
     'data': [
+        'security/ir.model.access.csv',
         'view/authorisation_view.xml',
         'data/account.ats.doc.csv',
         'data/account.ats.sustento.csv'

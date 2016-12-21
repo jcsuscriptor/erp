@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="campus_labs_pos_assets_ejemplo_total_lineas" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/campus_labs_pos/static/src/js/ejemplo_total_lineas.js"/>               
+            </xpath>
+        </template>
+    </data>
+</openerp>
