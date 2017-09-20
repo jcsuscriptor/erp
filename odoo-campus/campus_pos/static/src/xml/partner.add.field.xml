@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="campus_pos_assets_agregar_campos_partner" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/campus_pos/static/src/js/partner.add.field.js"/>               
+            </xpath>
+        </template>
+    </data>
+</openerp>

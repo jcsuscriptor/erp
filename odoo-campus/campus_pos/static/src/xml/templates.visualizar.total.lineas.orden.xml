@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+     
+  	
+    <t t-extend="OrderWidget">
+        <t t-jquery=".summary .total" t-operation="append">
+            <div class='subentry total_lineas'>Líneas: <span class="value">0</span></div>
+        </t>
+    </t>
+
+</templates>
