@@ -1,0 +1,39 @@
+<openerp>
+  <data>
+    
+	
+	<report
+		id="campus_invoice_report_client"
+		model="campus_invoice_report.client"
+		string="Reporte Facturas Clientes"
+		report_type="qweb-html"
+		name="campus_invoice_report.client"
+		file="campus_invoice_report.client" 
+	/>
+	
+	<template id="campus_invoice_report.client">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        
+                        <div class="row">
+                            <div><span t-field="doc.ced_ruc"/></div>
+                            <div><span t-field="doc.name"/></div>
+                            <div><span t-field="doc.estado"/></div>
+                            <div><span t-field="doc.date_invoice"/></div>
+                            <div><span t-field="doc.numero_factura"/></div>
+                            <div><span t-field="doc.base_imponible"/></div>
+                            <div><span t-field="doc.grabado_iva_0"/></div>
+                            <div><span t-field="doc.grabado_iva"/></div>
+                            <div><span t-field="doc.iva"/></div>
+                            <div><span t-field="doc.total"/></div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+  </data>
+</openerp>

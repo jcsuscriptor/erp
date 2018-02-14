@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  
+
+      <menuitem id="menu_simple_wizard" name="Reporte - Wizard - Simple" 
+                parent="campus_labs.campus_labs_menu"
+                action="action_simple_wizard"/>
+
+
+      <menuitem id="menu_simple_wizard" name="Reporte Cliente (Vista Postgres)" 
+                parent="campus_labs.campus_labs_menu"
+                action="action_report_client_view"/>
+
+
+</odoo>

@@ -1,0 +1,37 @@
+<openerp>
+    <data>
+     
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.actions.act_window" id="cliente_lista_action">
+            <field name="name">Clientes</field>
+            <field name="res_model">campus.cliente</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crear un cliente
+                </p>
+            </field>
+        </record>
+ 
+
+         <!-- top level menu: no parent -->
+        <menuitem id="main_campus_labs_menu" name="Campus - Laboratorio"/>
+        <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+        <menuitem id="campus_labs_menu" name="Campus"
+                  parent="main_campus_labs_menu"/>
+        <!-- the following menuitem should appear *after*
+             its parent campus_labs_menu and *after* its
+             action cliente_lista_action -->
+        <menuitem id="cliente_menu" name="Clientes" parent="campus_labs_menu"
+                  action="cliente_lista_action"/>
+        <!-- Full id location:
+             action="campus_labs.cliente_lista_action"
+             It is not required when it is the same module -->
+
+    </data>
+</openerp>

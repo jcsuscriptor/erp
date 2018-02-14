@@ -1,0 +1,37 @@
+<openerp>
+<data>
+    <report
+        id="report_cliente"
+        model="campus.cliente"
+        string="Reporte Cliente"
+        name="campus_labs.report_cliente_view"
+        file="campus.report_cliente"
+        report_type="qweb-html"
+        />
+
+    <template id="report_cliente_view">
+        <t t-call="report.html_container">
+            <div class="page">
+                <!-- Report header Content -->
+                <div class="row">
+                    <div class="col-xs-4">Nombre</div>
+                    <div class="col-xs-4">Fecha Registro</div>
+                    <div class="col-xs-4">Descripcion</div>
+                </div>
+
+                <!-- Report body Content -->
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="report.external_layout">
+
+                        <div class="row">
+                            <div class="col-xs-4"><span t-field="doc.name"/></div>
+                            <div class="col-xs-4"><span t-field="doc.date"/></div>
+                            <div class="col-xs-4"><span t-field="doc.description"/></div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+</data>
+</openerp>

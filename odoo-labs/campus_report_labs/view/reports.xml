@@ -1,0 +1,38 @@
+<openerp>
+  <data>
+    
+    <report
+        id="partner_xlsx"
+        model="res.partner"
+        string="Print to XLSX"
+        report_type="xlsx"
+        name="res.partner.xlsx"
+        file="res.partner.xlsx"
+        attachment_use="False"
+    />
+	 	  
+  </data>
+</openerp>
+
+
+<openerp>
+  <data>
+
+    <record id="action_bom_structure_xlsx" model="ir.actions.report.xml">
+      <field name="name">Export BOM Structure to Excel</field>
+      <field name="model">mrp.bom</field>
+      <field name="type">ir.actions.report.xml</field>
+      <field name="report_name">bom.structure.xlsx</field>
+      <field name="report_type">xlsx</field>
+      <field name="auto" eval="False"/>
+    </record>
+
+    <record model="ir.values" id="action_bom_structure_xlsx_values">
+      <field name="name">Export BOM Structure to Excel</field>
+      <field name="key2">client_action_multi</field>
+      <field name="value" eval="'ir.actions.report.xml,' +str(ref('action_bom_structure_xlsx'))" />
+      <field name="model">mrp.bom</field>
+    </record>   
+    
+  </data>
+</openerp>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_simple_wizard" model="ir.ui.view">
+        <field name="name">Simple wizard</field>
+        <field name="model">campus.labs.simple.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                 <field name="date_from"/>
+                 <field name="date_to"/>
+                <footer>
+                    
+                    <button name="button_action_one" string="Accion Uno" type="object" default_focus="1" class="oe_highlight"/>
+                    <button name="button_action_two" string="Accion Dos" type="object"/>
+                    <button string="Cancel" class="oe_link" special="cancel" /> 
+
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_simple_wizard"
+                name="Simple wizard"
+                res_model="campus.labs.simple.wizard"
+                view_type="form"
+                view_mode="form"
+                view_id="view_simple_wizard"
+                target="new" />
+
+</odoo>

@@ -1,0 +1,25 @@
+<openerp>
+  <data>
+    
+    <record id="action_report_client_view" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">Reporte Cliente (Vista Postgres)</field>
+            <field name="res_model">campus.labs.report.client</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+    </record>
+	
+	<record model="ir.ui.view" id="view_report_client_tree">
+            <field name="name">Reporte Cliente (Vista Postgres)</field>
+            <field name="model">campus.labs.report.client</field>
+            <field name="arch" type="xml">
+                <tree string="Datos" create="false">
+                    <field name='name'/>
+                    <field name='date' />
+                    <field name='description' />  
+                </tree>
+            </field>
+    </record>	
+				  
+  </data>
+</openerp>

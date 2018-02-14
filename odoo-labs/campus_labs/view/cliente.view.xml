@@ -1,0 +1,35 @@
+<openerp>
+    <data>
+        
+        <!-- form view -->
+        <record model="ir.ui.view" id="cliente_form_view">
+            <field name="name">cliente.form</field>
+            <field name="model">campus.cliente</field>
+            <field name="arch" type="xml">
+                <form string="Cliente Formulario">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="date"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+ 
+
+        <!-- search view -->
+        <record model="ir.ui.view" id="cliente_search_view">
+            <field name="name">campus.search</field>
+            <field name="model">campus.cliente</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,18 @@
+<openerp>
+    <data>
+        <record model="campus.cliente" id="cliente1">
+            <field name="name">Maria Perez</field>
+            <field name="description">Datos de ejemplo para laboratorio de Odoo</field>
+        </record>
+
+        <record model="campus.cliente" id="cliente2">
+            <field name="name">Carlos Luis</field>
+            <!-- no description for this one -->
+        </record>
+        
+        <record model="campus.cliente" id="cliente3">
+            <field name="name">Antonio Sanchez</field>
+            <field name="description">Informacion adicional del cliente</field>
+        </record>
+    </data>
+</openerp>

@@ -1,21 +1,24 @@
 <openerp>
-<data>
-    <report
-        id="report_cliente"
-        model="campus.cliente"
-        string="Reporte Cliente"
-        name="campus_labs.report_cliente_view"
-        file="campus.report_cliente"
-        report_type="qweb-pdf" />
-
-    <template id="report_cliente_view">
+  <data>
+    
+	
+	<report
+		id="campu_labs_client_report"
+		model="campus.labs.report.client"
+		string="Reporte Cliente (Vista Postgres)"
+		report_type="qweb-html"
+		name="campus_labs.report_client"
+		file="campus_labs.report_client" 
+	/>
+	
+	<template id="campus_labs.report_client">
         <t t-call="report.html_container">
             <t t-foreach="docs" t-as="doc">
                 <t t-call="report.external_layout">
                     <div class="page">
-                             
-                        <h2>Cliente</h2>
+                        
                         <p>Nombre: <span t-field="doc.name"/></p>
+                        <p>Fecha: <span t-field="doc.date"/></p>
                         <p>Descripcion: <span t-field="doc.description"/></p>
 
                     </div>
@@ -23,5 +26,8 @@
             </t>
         </t>
     </template>
-</data>
+	
+	 
+	 			  
+  </data>
 </openerp>
